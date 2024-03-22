@@ -1,7 +1,7 @@
 #include "gradient_method.hpp"
 #include <cmath>
 #include <iomanip>
-
+#include <limits>
 // general function that calls the specific method
 double compute_minimum(
     const std::function<double(const std::vector<double> &)> &f,
@@ -38,7 +38,7 @@ double compute_minimum_gradient(
     std::vector<double> x0 (p.x0);
     std::vector<double> x1 (p.x0);
     unsigned iter{};
-    std::cout << std::setprecision(10);
+    std::cout << std::setprecision(std::numeric_limits<double>::max_digits10);
     do{
         // move x0 to the next value computed during the previous iteration
         // RMK: the value owned by x1 after the swap should be discarded, no useful anymore
@@ -182,7 +182,7 @@ double compute_minimum_momentum_1(
     std::vector<double> d1(d0);
 
     unsigned iter{};
-    std::cout << std::setprecision(10);
+    std::cout << std::setprecision(std::numeric_limits<double>::max_digits10);
     do{
         // move x0 and d0 to next iteration
         std::swap(x0,x1);
@@ -230,7 +230,7 @@ double compute_minimum_momentum_2(
     // swap to perform correctly the first iteration
     std::swap(x0,x1);
     unsigned iter{1};
-    std::cout << std::setprecision(10);
+    std::cout << std::setprecision(std::numeric_limits<double>::max_digits10);
     do{
         std::swap(x2,x1);   // now x1 contains previous x2
         std::swap(x2,x0);   // now x0 contains previous x1
@@ -273,7 +273,7 @@ double compute_minimum_momentum_nesterov(
 
     std::swap(x0,x1);
     unsigned iter{1};
-    std::cout << std::setprecision(10);
+    std::cout << std::setprecision(std::numeric_limits<double>::max_digits10);
     do{
         std::swap(x2,x1);   // now x1 contains previous x2
         std::swap(x2,x0);   // now x0 contains previous x1
