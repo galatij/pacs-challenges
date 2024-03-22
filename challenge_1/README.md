@@ -22,13 +22,13 @@
 ## Compiling
 To compile, you just need to type `make`
 
-
-## Notes for running the code
 In the Makefile, you should change the path of the included repository where the utilities for parsing are stored, i.e.
 ```bash
 .../pacs-examples/Examples/Include'
 ```
 
+
+## Notes for running the code
 The user may run the code with the following options:
 - `-m[0-3]`: to choose the iterative scheme 
 - - `0` --> gradient method (default)
