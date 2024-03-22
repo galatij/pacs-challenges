@@ -1,0 +1,17 @@
+{
+    "max_it" : 600,
+    "tol_res" : 1e-06,
+    "tol_x" : 1e-06,
+    "x0" : [0,0],
+    "gradient_method": {
+        "a0" : 0.2,
+        "mu" : 0.2,
+        "sigma" : 0.2,
+        "step" : 2
+    },
+    "momentum" : {
+        "mu" : 0.9,
+        "a0" : 0.03,
+        "variant": 0
+    }
+}
