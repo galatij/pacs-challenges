@@ -1,0 +1,10 @@
+README is well done. You could explicitly say how to choose the step alpha (however, it is easily understandable from the code).
+
+The formulations of heavyball are equivalent, there is no need for implementing both.
+Nesterov and heavyball are two different methods.
+
+You should add a check and a warning on the method choice for invalid inputs.
+You could have declared and defined the funciton read_parameters inside the same header and source files as the parameters struct.
+
+Good use of the standard library and template functions.
+The code is well commented and organized.
